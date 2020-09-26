@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.p-card {
+  margin: 20px;
+}
+
+.p-card-image {
+  border-radius: 30px;
+  width: 343px;
+  height: 500px;
+  box-shadow: 0px 0px 3px 1px #ccc;
+  margin-top: 100px;
+}
+
+.p-card-info {
+  margin-top: 10px;
+  min-height: 180px;
+  margin-bottom: -190px;
+}
+
+.p-card-title {
+  font-size: 24px;
+  margin: 0px;
+}
+
+.p-card-subtitle {
+  font-size: 16px;
+  margin: 0px;
+}
