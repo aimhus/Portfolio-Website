@@ -19,9 +19,9 @@ class App extends React.Component {
         { title: 'Contact', path: '/contact'}
       ],
       home: {
-        title: 'Be Relentless', 
-        subTitle: 'Projects that make a difference ',
-        text: 'Check out my projects below'
+        title: 'Passion Drives Ingenuity', 
+        subTitle: 'A Collection of my Favourite Projects',
+        //text: 'Check out my projects below'
       },
       about: {
         title: 'About Moi',
@@ -36,18 +36,20 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Container fluid={true}>
+        <Container fluid={true} className="p-0">
           <Navbar className="border-bottom" bg="transparent" expand="lg">
             <NavbarBrand>Aiman Hussaini</NavbarBrand>
             <Navbar.Toggle aria-controls="navbar-toggle"/>
-            <Navbar.Collapse id="navbar-toggle"></Navbar.Collapse>
-              <Nav className="ml-auto">
+            <Navbar.Collapse id="navbar-toggle">
+            <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
 
                 
               </Nav>
+            </Navbar.Collapse>
+              
           </Navbar>
 
           <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>}></Route>

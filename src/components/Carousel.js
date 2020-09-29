@@ -12,8 +12,8 @@ class Carousel extends React.Component {
             items: [
                 {
                     id: 0,
-                    title: 'Note Taking App',
-                    subTitle: 'All-in-one organizational tool',
+                    title: 'R3 Mars Rover',
+                    subTitle: 'Autonomous and GPS Systems',
                     imgSrc: rover,
                    // gitLink: ,
                    // link: ,
