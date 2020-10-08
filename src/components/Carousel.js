@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import rover from '../assets/rover.png';
 import Card from '../components/Card';
+import { animateScroll as scroll } from 'react-scroll';
 
 class Carousel extends React.Component {
 
@@ -15,60 +16,61 @@ class Carousel extends React.Component {
                     title: 'R3 Mars Rover',
                     subTitle: 'Autonomous and GPS Systems',
                     imgSrc: rover,
-                   // gitLink: ,
-                   // link: ,
-                    selected: false
+                    selected: false,
+                    clicked: false,
+                    position: 1730
                 },
                 {
                     id: 1,
                     title: 'Note Taking App',
                     subTitle: 'All-in-one organizational tool',
                     imgSrc: rover,
-                   // gitLink: ,
-                   // link: ,
-                    selected: false
+                    selected: false,
+                    clicked: false,
+                    position: 3665
                 },
                 {
                     id: 2,
                     title: 'Note Taking App',
                     subTitle: 'All-in-one organizational tool',
                     imgSrc: rover,
-                   // gitLink: ,
-                   // link: ,
-                    selected: false
+                    selected: false,
+                    clicked: false,
+                    position: 5605
                 },
                 {
                     id: 3,
                     title: 'Note Taking App',
                     subTitle: 'All-in-one organizational tool',
                     imgSrc: rover,
-                   // gitLink: ,
-                   // link: ,
-                    selected: false
+                    selected: false,
+                    clicked: false,
+                    position: 7545
                 },
                 {
                     id: 4,
                     title: 'Note Taking App',
                     subTitle: 'All-in-one organizational tool',
                     imgSrc: rover,
-                   // gitLink: ,
-                   // link: ,
-                    selected: false
+                    selected: false,
+                    clicked: false,
+                    position: 9490
                 },
                 {
                     id: 5,
                     title: 'Note Taking App',
                     subTitle: 'All-in-one organizational tool',
                     imgSrc: rover,
-                   // gitLink: ,
-                   // link: ,
-                    selected: false
+                    selected: false,
+                    clicked: false,
+                    position: 11425
                 },
             ]
         }
+        
     }
 
-    handleCardClick = (id, card) => {
+    handleMouseOver = (id, card) => {
         let items = [...this.state.items];
 
         items[id].selected = items[id].selected ? false : true;
@@ -84,11 +86,30 @@ class Carousel extends React.Component {
         });
     }
 
+    
+
+    handleClick = (id, card, scrollPos) => {
+        
+
+        const scrollOptions = {
+            smooth: 'easeInOutBounce'
+        }
+
+        scroll.scrollTo(scrollPos, {
+            duration: 1500,
+            delay: 50,
+            smooth: 'easeInOutCubic',
+            offset: 0,
+            activeClass: true,
+        });
+
+    }
+
 
     makeItems = (items, limit_low, limit_high) => {
         return items.map(item => {
             if(item.id >= limit_low && item.id < limit_high) {
-                return <Card item={item} mouseover={(e => this.handleCardClick(item.id, e))} key={item.id} />
+                return <Card item={item} mouseover={(e => this.handleMouseOver(item.id, e))} key={item.id} onClick={(e => this.handleClick(item.id, e, item.position))} />
             }
         });
     }

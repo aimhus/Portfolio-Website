@@ -10,6 +10,7 @@ function CardInfo(props) {
         <animated.div className="p-card-info" style={style}>
             <p className="p-card-title">{props.title}</p>
             <p className="p-card-subtitle">{props.subTitle} </p>
+            <p className="p-card-clickPrompt">Click image for more info</p>
         </animated.div>
     );
 

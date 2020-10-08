@@ -1,11 +1,14 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import {Container, Navbar, NavbarBrand, Nav} from 'react-bootstrap';
+import {Container, Navbar, NavbarBrand, Nav, NavDropdown} from 'react-bootstrap';
 import './App.css';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import { animateScroll as scroll } from 'react-scroll';
+import logo1 from './assets/logo1.png';
+import logo2 from './assets/logo2.png';
 
 class App extends React.Component {
 
@@ -33,16 +36,37 @@ class App extends React.Component {
     }
   }
 
+  handleNameClick = () => {
+    scroll.scrollToTop();
+  }
+
+  handleClick = (scrollPos) => {
+
+    scroll.scrollTo(scrollPos, {
+        duration: 1500,
+        delay: 50,
+        smooth: 'easeInOutCubic',
+        offset: 0,
+        activeClass: true,
+    });
+
+}
+
   render() {
     return (
       <Router>
-        <Container fluid={true} className="p-0">
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <NavbarBrand>Aiman Hussaini</NavbarBrand>
+        <Container fluid={true} className="p-0 nav-colour">
+          <Navbar className="" bg="transparent" expand="lg" fixed="top">
+            <NavbarBrand color="hero-colour" onClick={(e) => this.handleNameClick()}>
+              <img src=""/>
+              Aiman Hussaini</NavbarBrand>
             <Navbar.Toggle aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
+                <NavDropdown title="Projects" id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={(e) => this.handleClick(1730)}>Project 1</NavDropdown.Item>
+                </NavDropdown>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
 

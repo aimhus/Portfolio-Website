@@ -1,5 +1,5 @@
 import React from 'react';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import { Container, Row, Col } from 'react-bootstrap';
 
 function InfoSection(props) {
@@ -10,7 +10,7 @@ function InfoSection(props) {
         //marginRight: 30,
        // marginTop: 50,
         borderRadius: 25,
-        marginLeft: 30
+        marginLeft: 30,
     }
 
     const imgStyleLeft = {
@@ -53,16 +53,16 @@ function InfoSection(props) {
             <Parallax
                 blur={10}
                 bgImage={props.bgImg}
-                bgImageAlt="the cat"
+                bgImageAlt=""
                 strength={700}
             >
             <div fluid={true} style={{paddingBottom: 100, paddingTop: 100, paddingLeft: 50, paddingRight: 50}} >
                 <Container fluid>
                     <Row style={{paddingBottom: 75}}>
-                        <Col style={pStyleRight} lg={8} sm={12} md={12}>
+                        <Col style={pStyleRight} lg={8} sm={12} md={12} xl={8}>
                             <p style={textStyle}>{txt1p1}<br></br><br></br>{txt1p2}</p>
                         </Col>
-                        <Col lg={4} sm={12} md={12}>
+                        <Col lg={4} sm={12} md={12} xl={4}>
                             <img className="" src={props.img1} style={imgStyleRight} alt=""/>
                         </Col>
                     </Row>
