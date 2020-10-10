@@ -55,8 +55,8 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Container fluid={true} className="p-0 nav-colour">
-          <Navbar className="" bg="transparent" expand="lg" fixed="top">
+        <Container fluid={true} className="p-0">
+          <Navbar className="" bg="nav-colour" expand="lg" fixed="top">
             <NavbarBrand color="hero-colour" onClick={(e) => this.handleNameClick()}>
               <img src=""/>
               Aiman Hussaini</NavbarBrand>

@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import rover from '../assets/rover.png';
+import AppFullSC1 from '../assets/AppFullSC1.png';
+import PCBbrd1 from '../assets/PCBbrd1.png';
 import Card from '../components/Card';
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -24,16 +26,16 @@ class Carousel extends React.Component {
                     id: 1,
                     title: 'Note Taking App',
                     subTitle: 'All-in-one organizational tool',
-                    imgSrc: rover,
+                    imgSrc: AppFullSC1,
                     selected: false,
                     clicked: false,
                     position: 3665
                 },
                 {
                     id: 2,
-                    title: 'Note Taking App',
-                    subTitle: 'All-in-one organizational tool',
-                    imgSrc: rover,
+                    title: 'Audio Amplifier',
+                    subTitle: 'PCB Design and Creation',
+                    imgSrc: PCBbrd1,
                     selected: false,
                     clicked: false,
                     position: 5605
