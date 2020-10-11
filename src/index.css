@@ -12,12 +12,17 @@ code {
     monospace;
 }
 
-.nav-colour {
-  background-color: #3aafa9;
+.change-cursor-p {
+  cursor: pointer;
+}
+
+.nav-custom .navbar-brand,
+.nav-custom .navbar-text {
+  color: white;
 }
 
 .bg-colour {
-  background-color: #3aafa9;
+  background-color: #778899;
 }
 
 .hero-colour {
@@ -25,7 +30,11 @@ code {
 }
 
 .hero-colour2 {
-  color: #def2f1;
+  color: #f8f8ff;
+}
+
+.about-text {
+  font-size: x-large;
 }
 
 .p-card {

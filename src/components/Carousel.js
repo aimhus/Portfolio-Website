@@ -1,11 +1,14 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import Card from '../components/Card';
+import { animateScroll as scroll } from 'react-scroll';
+
 import rover from '../assets/rover.png';
 import AppFullSC1 from '../assets/AppFullSC1.png';
 import PCBbrd1 from '../assets/PCBbrd1.png';
-import Card from '../components/Card';
-import { animateScroll as scroll } from 'react-scroll';
+import fpgaSch1R from '../assets/fpgaSch1R.png';
+import BankCode from '../assets/BankCode.png';
 
 class Carousel extends React.Component {
 
@@ -42,30 +45,30 @@ class Carousel extends React.Component {
                 },
                 {
                     id: 3,
-                    title: 'Note Taking App',
-                    subTitle: 'All-in-one organizational tool',
-                    imgSrc: rover,
+                    title: 'General Purpose Processor',
+                    subTitle: 'Design, Schematics and Implementation',
+                    imgSrc: fpgaSch1R,
                     selected: false,
                     clicked: false,
                     position: 7545
                 },
                 {
                     id: 4,
-                    title: 'Note Taking App',
-                    subTitle: 'All-in-one organizational tool',
-                    imgSrc: rover,
+                    title: 'Banking Simulation',
+                    subTitle: 'Management Tool for Admins and Customers',
+                    imgSrc: BankCode,
                     selected: false,
                     clicked: false,
-                    position: 9490
+                    position: 9510
                 },
                 {
                     id: 5,
-                    title: 'Note Taking App',
-                    subTitle: 'All-in-one organizational tool',
+                    title: 'Home Automation System',
+                    subTitle: 'Arduino and IoT',
                     imgSrc: rover,
                     selected: false,
                     clicked: false,
-                    position: 11425
+                    position: 11445
                 },
             ]
         }
@@ -91,14 +94,9 @@ class Carousel extends React.Component {
     
 
     handleClick = (id, card, scrollPos) => {
-        
-
-        const scrollOptions = {
-            smooth: 'easeInOutBounce'
-        }
 
         scroll.scrollTo(scrollPos, {
-            duration: 1500,
+            duration: 2000,
             delay: 50,
             smooth: 'easeInOutCubic',
             offset: 0,

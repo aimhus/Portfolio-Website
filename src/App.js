@@ -7,8 +7,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { animateScroll as scroll } from 'react-scroll';
-import logo1 from './assets/logo1.png';
-import logo2 from './assets/logo2.png';
+import logo from './assets/logo.svg';
 
 class App extends React.Component {
 
@@ -24,10 +23,9 @@ class App extends React.Component {
       home: {
         title: 'Passion Drives Ingenuity', 
         subTitle: 'A Collection of my Favourite Projects',
-        //text: 'Check out my projects below'
       },
       about: {
-        title: 'About Moi',
+        title: 'About Me',
         subTitle: 'Shoot me an email bruh',
       },
       contact: {
@@ -56,16 +54,21 @@ class App extends React.Component {
     return (
       <Router>
         <Container fluid={true} className="p-0">
-          <Navbar className="" bg="nav-colour" expand="lg" fixed="top">
-            <NavbarBrand color="hero-colour" onClick={(e) => this.handleNameClick()}>
-              <img src=""/>
+          <Navbar className="navbar-dark" expand="lg" fixed="top">
+            <NavbarBrand className="navbar-brand change-cursor-p" onClick={(e) => this.handleNameClick()} color="navbar-brand">
+              <img src={logo} alt=""/>
               Aiman Hussaini</NavbarBrand>
             <Navbar.Toggle aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
                 <NavDropdown title="Projects" id="basic-nav-dropdown">
-                  <NavDropdown.Item onClick={(e) => this.handleClick(1730)}>Project 1</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(1730)}>Mars Rover</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(3665)}>Notes App</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(5605)}>Audio Amplifier</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(7545)}>General Processor</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(9510)}>Banking Simulation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(11445)}>Home Automation System</NavDropdown.Item>
                 </NavDropdown>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
