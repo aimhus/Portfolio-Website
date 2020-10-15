@@ -9,6 +9,7 @@ import AppFullSC1 from '../assets/AppFullSC1.png';
 import PCBbrd1 from '../assets/PCBbrd1.png';
 import fpgaSch1R from '../assets/fpgaSch1R.png';
 import BankCode from '../assets/BankCode.png';
+import iotCard2 from '../assets/iotCard2.png';
 
 class Carousel extends React.Component {
 
@@ -32,7 +33,7 @@ class Carousel extends React.Component {
                     imgSrc: AppFullSC1,
                     selected: false,
                     clicked: false,
-                    position: 3665
+                    position: 3800
                 },
                 {
                     id: 2,
@@ -41,7 +42,7 @@ class Carousel extends React.Component {
                     imgSrc: PCBbrd1,
                     selected: false,
                     clicked: false,
-                    position: 5605
+                    position: 6000
                 },
                 {
                     id: 3,
@@ -50,7 +51,7 @@ class Carousel extends React.Component {
                     imgSrc: fpgaSch1R,
                     selected: false,
                     clicked: false,
-                    position: 7545
+                    position: 7950
                 },
                 {
                     id: 4,
@@ -59,16 +60,16 @@ class Carousel extends React.Component {
                     imgSrc: BankCode,
                     selected: false,
                     clicked: false,
-                    position: 9510
+                    position: 10110
                 },
                 {
                     id: 5,
                     title: 'Home Automation System',
                     subTitle: 'Arduino and IoT',
-                    imgSrc: rover,
+                    imgSrc: iotCard2,
                     selected: false,
                     clicked: false,
-                    position: 11445
+                    position: 12200
                 },
             ]
         }

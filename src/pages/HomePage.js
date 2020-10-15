@@ -25,6 +25,8 @@ import BankDemo1 from '../assets/BankDemo1.png';
 import Java from '../assets/java.jpeg';
 import JavaBG from '../assets/javabg.jpg';
 import iot1 from '../assets/iot1.jpg';
+import esp from '../assets/esp.jpg';
+import cayenne from '../assets/cayenne.jpg';
 import iotbg from '../assets/iotbg.jpg';
 
 function HomePage(props) {
@@ -74,9 +76,7 @@ function HomePage(props) {
             txt2p2="A potentiometer is used to modify the resistance and and act as a volume knob, with a network of coloured LEDs to indicate the current level. The board also features expandibility by allowing me to add a speaker down the line."
             img3={PCBschematic}
             txt3p1="The bulk of this project was learning the fundamentals of circuit design and implementing it using Eagle CAD. I really enjoyed this process because it was the first real application of the course material I had been learning in class."
-            txt3p2="Here's a picture of the schematics (type of file name). explain it"
-            //link="https://github.com/aimhus/Portfolio-Website"
-            //linkText="here. (Change link)"
+            txt3p2="Here's a picture of the board schematics. The central piece is the LM386 op-amp, which takes the input signal and amplifies it according to the impedance set by the potentiometer. There are connections for other input signals, a smoothing capacitor to reduce output signal noise, and an LM339 Quad Differential Comparator to properly indicate the volume level with LEDs."
             />
             <InfoSection 
             bgImg={circuit3} 
@@ -89,7 +89,7 @@ function HomePage(props) {
             img3={FPGA}
             txt3p1="One of the biggest reasons I chose to pursue Computer Engineering was my fascination with processor design. Ever since I started designing custom PCs in high school, I've had a desire to know more about how the tech products we take for granted do what they do. This curiosity sparked an interest in understanding chip design and architecture, a passion I still pursue to this day."
             txt3p2="Needless to say, this project was super exciting for me. Although the processor shown here is very basic compared to what powers our devices today, it gave me understanding of the fundamentals and hands-on experience. I love being able to apply what I learn in class and achieve tangible results, so I'm very grateful for this opportunity. You can view the full details of the processor in "
-            link="https://github.com/aimhus/Portfolio-Website"
+            link="https://docs.google.com/document/d/1nbyoiHfWlptwL1J1JEZIK09LcP_dGa4ZdXKnGf_JUrw/edit?usp=sharing"
             linkText="this report."
             />
             <InfoSection 
@@ -109,16 +109,16 @@ function HomePage(props) {
             <InfoSection 
             bgImg={iotbg} 
             img1={iot1} 
-            txt1p1="Some Current Project? Maybe BS the hockey website lol"
-            txt1p2="<Insert Name Here> puts the power back into the hands of the user. After first focusing on maintaining an easy-to-use design scheme, my ultimate goals are to enable fully customizable notifications, reminders, calendar integrations and more. After all, who knows how you stay organized better than yourself?"
-            img2={roverPlotDemo} 
-            txt2p1="Although I'm most comfortable with Java, I decided to push myself and explore other avenues for the development of this app. I settled on using Flutter, Google's open-source SDK built for Dart. I appreciate the flexibility it gives me to experiement with Material UI and different backend solutions."
-            txt2p2="Something about SQLite and technical things here."
-            img3={roverPlotDemo}
-            txt3p1="Being one of my first real forays in front-end development, I have learned a lot of valuable lessons in working on this project. It helped me realize the importance of fluid design that works intuitively for the user. Alongside customizability, I am committed to providing options to improve the accessibility of the app, from visual contrast to design overhauls. I appreciate all feedback so that I can make <Name Here> an organizational tool for everyone."
-            txt3p2="This app is still a work in progress. I have some more development to do before deployment and lots of ideas for new features post-release! I hope you'll follow along its development as I continue to improve the design and experience. You can view the source code for the project "
-            link="https://github.com/aimhus/Portfolio-Website"
-            linkText="here. (Change link)"
+            txt1p1="In my first year of university, I joined the IEEE Ryerson Engineering Chapter. This was my first extracurricular since high school, and I'm really glad I chose this one! I met a lot of great upper year students who not only showed me how to build some fun projects, but also good advice for universities and internships."
+            txt1p2="We created two major projects over the course of the year: the Audio Amplifier I talked about above, and this IoT Home Automation System. This system was my first experience experience with wireless connection protocols, which ended up helping me when it came time to write wireless communications between the R3 rover and the Base Station."
+            img2={esp} 
+            txt2p1="This system was a small-scale simulation of an automatic door lock using an RFID sensor, an LCD and a servo motor. The RFID sensor validates the card; if it's the correct ID, it initializes a welcome message and turns the motor. An incorrect ID flashes a warning message instead."
+            txt2p2="The heart of the system is the two ESP8266 microcontrollers, which we used to code the proper reactions to sensor data in Arduino."
+            img3={cayenne}
+            txt3p1="We explored a few different wireless protocols, including SPI, MQTT and I2C. To manage the communications and their behaviour, we used the Cayenne IoT framework. It provided a clean GUI to keep an eye on metrics and tie the whole system together."
+            txt3p2=""
+            link=""
+            linkText=""
             />
         </div>
     );

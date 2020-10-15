@@ -37,6 +37,19 @@ code {
   font-size: x-large;
 }
 
+.responsive-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+  align-self: center;
+}
+
+.responsive-text {
+  width: 100%;
+  height: auto;
+  align-self: center;  
+}
+
 .p-card {
   margin: 20px;
 }

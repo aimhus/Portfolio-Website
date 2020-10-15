@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 import github from '../assets/github.png';
 import linkedin from '../assets/linkedin.png';
 import resume from '../assets/resume.png';
-import AH_Resume from '../assets/AH_Resume.pdf';
+import ResumeDoc from '../assets/Resume2020.pdf';
 
 function AboutPage(props) {
 
@@ -35,7 +35,7 @@ function AboutPage(props) {
                             interest in back-end development, ensuring all processes behind the scenes are running 
                             smoothly. I also really enjoy chip architecture and design. I've always looked up to the
                             people who design cutting edge new technologies like the 7nm design process in Intel and AMD's 
-                            new CPUs, and the refined use of Tensor Cores in Nvidia's RTX 30 series GPUs. Finally, I also 
+                            upcoming CPUs, and the refined use of Tensor Cores in Nvidia's RTX 30 series GPUs. Finally, I also 
                             really enjoy the robotics industry, and my experience with R3 has given me a newfound fascination 
                             with autonomy and machine learning.
                         </p>
@@ -44,13 +44,13 @@ function AboutPage(props) {
                             update my experiences. You can follow my progress in the following places:
                         </p>
                         <Row className="justify-content-around" style={{paddingTop: 29}}>
-                            <a href="https://github.com/aimhus" lg={1} md={1} sm={2}>
+                            <a href="https://github.com/aimhus" target="blank" lg={1} md={1} sm={2}>
                                 <img src={github} alt="" style={{height: 75, width: 'auto'}}/>
                             </a>
-                            <a href="https://www.linkedin.com/in/aimanhus/" lg={1} md={1} sm={2} >
+                            <a href="https://www.linkedin.com/in/aimanhus/" target="blank" lg={1} md={1} sm={2} >
                                 <img src={linkedin} alt="" style={{height: 75, width: 75}}/>
                             </a>
-                            <a href={AH_Resume} lg={1} md={1} sm={2} >
+                            <a href={ResumeDoc} target="blank" lg={1} md={1} sm={2} >
                                 <img src={resume} alt="" style={{height: 75, width: 75}}/>
                             </a>
                         </Row>

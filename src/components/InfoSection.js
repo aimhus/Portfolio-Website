@@ -36,6 +36,10 @@ function InfoSection(props) {
         color: 'white',
         fontWeight: 'bold',
         fontSize: 28,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingBottom: 20,
+        paddingTop: 20,
       //  width: 800
     }
 
@@ -59,29 +63,29 @@ function InfoSection(props) {
             <div fluid={true} style={{paddingBottom: 100, paddingTop: 100, paddingLeft: 50, paddingRight: 50}} >
                 <Container fluid>
                     <Row style={{paddingBottom: 75}}>
-                        <Col style={pStyleRight} lg={8} sm={12} md={12} xl={8}>
+                        <Col className="responsive-text" lg={8} sm={12} md={12} xl={8} xs={12}>
                             <p style={textStyle}>{txt1p1}<br></br><br></br>{txt1p2}</p>
                         </Col>
-                        <Col lg={4} sm={12} md={12} xl={4}>
-                            <img className="" src={props.img1} style={imgStyleRight} alt=""/>
+                        <Col className="align-self-center" lg={4} sm={12} md={12} xl={4}>
+                            <img className="responsive-img" src={props.img1} alt=""/>
                         </Col>
                     </Row>
 
                     <Row style={{paddingBottom: 75}}>
-                        <Col lg={4} sm={12} md={12}>
-                            <img className="" src={props.img2} style={imgStyleLeft} alt="" />
+                        <Col className="align-self-center" lg={4} sm={12} md={12}>
+                            <img className="responsive-img" src={props.img2} alt="" />
                         </Col>
-                        <Col style={pStyleLeft} lg={8} sm={12} md={12}>
+                        <Col className="responsive-text" lg={8} sm={12} md={12}>
                             <p style={textStyle}>{txt2p1}<br></br><br></br>{txt2p2}</p>
                         </Col>
                     </Row>
 
                     <Row>
-                        <Col style={pStyleRight} lg={8} sm={12} md={12}>
-                            <p style={textStyle}>{txt3p1}<br></br><br></br>{txt3p2}<a href={link}>{linkText}</a></p>
+                        <Col className="responsive-text" lg={8} sm={12} md={12}>
+                            <p style={textStyle}>{txt3p1}<br></br><br></br>{txt3p2}<a href={link} target="blank">{linkText}</a></p>
                         </Col>
-                        <Col lg={4} sm={12} md={12}>
-                            <img className="" src={props.img3} style={imgStyleRight} alt=""/>
+                        <Col className="align-self-center" lg={4} sm={12} md={12}>
+                            <img className="responsive-img" src={props.img3} alt=""/>
                         </Col>
                     </Row>
                 </Container>

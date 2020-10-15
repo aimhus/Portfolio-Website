@@ -50,6 +50,8 @@ class App extends React.Component {
 
 }
 
+// Add <Link className="nav-link" to="/contact">Contact</Link> to Line 76 to add back Contact Page
+
   render() {
     return (
       <Router>
@@ -64,14 +66,14 @@ class App extends React.Component {
                 <Link className="nav-link" to="/">Home</Link>
                 <NavDropdown title="Projects" id="basic-nav-dropdown">
                   <NavDropdown.Item onClick={(e) => this.handleClick(1730)}>Mars Rover</NavDropdown.Item>
-                  <NavDropdown.Item onClick={(e) => this.handleClick(3665)}>Notes App</NavDropdown.Item>
-                  <NavDropdown.Item onClick={(e) => this.handleClick(5605)}>Audio Amplifier</NavDropdown.Item>
-                  <NavDropdown.Item onClick={(e) => this.handleClick(7545)}>General Processor</NavDropdown.Item>
-                  <NavDropdown.Item onClick={(e) => this.handleClick(9510)}>Banking Simulation</NavDropdown.Item>
-                  <NavDropdown.Item onClick={(e) => this.handleClick(11445)}>Home Automation System</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(3800)}>Notes App</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(6000)}>Audio Amplifier</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(7950)}>General Processor</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(10110)}>Banking Simulation</NavDropdown.Item>
+                  <NavDropdown.Item onClick={(e) => this.handleClick(12200)}>Home Automation System</NavDropdown.Item>
                 </NavDropdown>
                 <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/contact">Contact</Link>
+                
 
                 
               </Nav>
